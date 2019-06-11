@@ -37,6 +37,23 @@ val `algebra-circe-js` = `algebra-circe`.js
 
 val `algebra-circe-jvm` = `algebra-circe`.jvm
 
+val `algebra-protoless` =
+  crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure).in(file("algebra-protoless"))
+    .settings(
+      publishSettings,
+      `scala 2.11 to 2.12`,
+      name := "endpoints-algebra-protoless",
+      libraryDependencies ++= Seq(
+        "io.protoless" %% "protoless-core" % "0.0.7",
+        "io.protoless" %% "protoless-generic" % "0.0.7"
+      )
+    )
+    .dependsOn(`algebra` % "test->test;compile->compile")
+
+val `algebra-protoless-js` = `algebra-protoless`.js
+
+val `algebra-protoless-jvm` = `algebra-protoless`.jvm
+
 val `algebra-playjson` =
   crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure).in(file("algebra-playjson"))
     .settings(

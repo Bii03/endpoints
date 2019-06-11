@@ -3,6 +3,7 @@ import EndpointsSettings._
 // Algebra interfaces
 val algebras = project.in(file("algebras"))
 val jsonSchema = project.in(file("json-schema"))
+val protobufSchema = project.in(file("protobuf-schema"))
 
 // Interpreters
 val openapi = project.in(file("openapi"))

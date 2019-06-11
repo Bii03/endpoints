@@ -76,6 +76,7 @@ object EndpointsSettings {
   val circeVersion = "0.11.1"
   val playjsonVersion = "2.6.13"
   val playVersion = "2.6.21"
+  val protolessVersion = "0.0.7"
   val sttpVersion = "1.5.15"
 
   val scalaTestVersion = "3.0.7"
